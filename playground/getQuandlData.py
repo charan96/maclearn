@@ -7,6 +7,8 @@ import pandas as pd
 from sklearn import preprocessing, cross_validation, svm
 from sklearn.linear_model import LinearRegression
 
+matplotlib.use('py')
+
 df = quandl.get("WIKI/GOOG")
 df = df[['Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume']]
 df['HL_PCT'] = (df['Adj. High'] - df['Adj. Low']) / df['Adj. Close'] * 100.0
